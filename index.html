@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LowCredit Rewards</title>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"> -->
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+        }
+
+        .title {
+            font-size: 50px;
+            line-height: 47px;
+        }
+
+        body {
+            background:
+                linear-gradient(90deg, #A6D9F8 0%, #D2CCFC 100%) 0 0 / 100% 55%,
+                #051C3B 0 50% / 100% 50%;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .underline {
+            height: 30px;
+        }
+
+        .btn-main {
+            background: linear-gradient(90deg, #3CC2C5 0%, #9F9CF3 100%);
+            color: black;
+            font-weight: 600;
+            font-size: 22px;
+            animation: blink 1s linear infinite;
+        }
+
+
+        .blur {
+            width: 100vw;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .thin {
+            font-weight: 400;
+        }
+
+        .blur-white {
+            background-color: rgba(255, 255, 255, 0.3);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(130px);
+        }
+
+        .f-14 {
+            font-size: 14px;
+        }
+
+        .btn-con {
+            margin-top: -25px;
+            z-index: 1;
+        }
+
+        .o-5 {
+            opacity: 0.5;
+        }
+
+        .minus {
+            margin-top: -50px;
+        }
+
+        .btn-con a {
+            text-decoration: none;
+            color: black;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                transform: scale(0.9);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        .popup-con {
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            z-index: 2;
+        }
+
+        form {
+            background-color: white;
+            height: fit-content;
+        }
+
+        .otp-in {
+            width: 50px;
+            height: 50px;
+        }
+
+        .form-group {
+            margin-top: 10px;
+        }
+
+        label {
+            margin: 0px !important;
+        }
+
+        .close-con {
+
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .otp-con {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="d-flex align-items-center justify-content-center flex-column minus">
+        <div class="px-5 text-center">
+            <h1 class="title thin">LowCredit <br> <span class="fw-bold">Rewards</span></h1>
+            <h4 class="my-3 thin">Get a Lifetime Free Credit Card + Rs 1000* Amazon voucher</h4>
+        </div>
+        <div class="d-flex align-items-end justify-content-center gap-4 col-12 blur">
+            <img src="./assets/card1.png" width="35%" alt="gift-box" class="gift-box">
+            <img src="./assets/gift1.png" width="35%" alt="credit-card" class="credit-card">
+        </div>
+        <div
+            class="d-flex px-4 align-items-center mt-3 pb-4 gap-1 justify-content-center col-11 rounded-4 blur-white text-white">
+            <div class="text-center col-6 mt-3">
+                <p class="f-14">No Annual Fee, <br> Great Offers</p>
+            </div>
+            <hr class="border border-white underline">
+            <div class="text-center col-6 mt-3">
+                <p class="f-14">Free Rs.1000 <br> Voucher</p>
+            </div>
+        </div>
+        <div class="col-12 px-4 btn-con text-center">
+            <a href="cards.html"><button type="button" class="btn col-9 btn-main rounded-pill">Claim now</button></a>
+        </div>
+        <small class="text-white mt-3 o-5 text-center">T&C Apply - Limited Time Offer </small>
+    </main>
+
+    <!-- <div class="popup-con">
+        <form action="" class="form-con mt-5 col-11 p-4 rounded-3">
+            <div class="close-con col-12 mb-4">
+                <button class="fw-20 px-2 border shadow-sm" onclick="closepopup()" type="button">x</button>
+            </div>
+            <div class="form-group">
+                <label for="mobile" class="form-label f-14">Enter Mobile Number</label>
+                <input type="number" class="form-control col-11" id="mobile" placeholder="Enter your Mobile Numbers"
+                    maxlength="10">
+            </div>
+
+            <div class="form-group otp-con ">
+                <label for="otp" class="f-14 form-label">Enter OTP</label>
+                <div class="d-flex align-items-center gap-3">
+                    <input type="number" class="form-control otp-in text-center">
+                    <input type="number" class="form-control otp-in text-center">
+                    <input type="number" class="form-control otp-in text-center">
+                    <input type="number" class="form-control otp-in text-center">
+                </div>
+            </div>
+
+            <div class="form-group d-flex align-items-start">
+
+                <label class="f-14"><input type="checkbox" class="form-control-check mt-1" id="checkbox"> &nbsp;I agree
+                    with <a href="">Terms & Conditions</a> & <a href="">Privacy Policy</a> and i agree to receive
+                    message through whatsapp, RCS and Email</label>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="sendotp()" class="btn col-12 btn-primary rounded-pill">Send OTP</button>
+                <button type="submit" onclick="" class="btn col-12 btn-primary rounded-pill">Submit</button>
+            </div>
+        </form>
+    </div> -->
+
+    <!-- <script>
+        function register() {
+            document.querySelector(".popup-con").style.display = "flex";
+        }
+        function closepopup(){
+            document.querySelector(".popup-con").style.display = "none";
+        }
+    </script> -->
+</body>
+
+</html>

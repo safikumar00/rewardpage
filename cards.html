@@ -29,7 +29,7 @@
             background: linear-gradient(90deg, #3CC2C5 0%, #9F9CF3 100%);
             color: black;
             font-weight: 600;
-            font-size: 22px;
+            font-size: 18px;
             text-transform: uppercase;
         }
 
@@ -78,7 +78,11 @@
 
         .btn {
             /* color: white; */
-            font-size: 16px;
+            font-size: 14px;
+            padding: 5px 0px !important;
+            font-weight: 500;
+            box-shadow: 1px 1px 7px 2px rgba(146, 148, 248, 0.4);
+
         }
 
         .text-left {
@@ -123,9 +127,12 @@
             color: white;
         }
 
-        .bg-white {
-            background: linear-gradient(165deg, #3CC2C5 60%, #9F9CF3 100%);
+        @media only screen and (min-width: 768px) {
 
+            /* Hide the body content for screens smaller than 768px */
+            body {
+                display: none;
+            }
         }
     </style>
 </head>
